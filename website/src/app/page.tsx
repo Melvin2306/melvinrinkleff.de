@@ -4,14 +4,12 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import Navbar from "./Navbar";
 
 const footer = [{ name: "Imprint", href: "imprint" }];
 
 export default function Example() {
   return (
     <div className="bg-white">
-      <Navbar />
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
