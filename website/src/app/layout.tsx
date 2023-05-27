@@ -47,8 +47,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.className}
-        bg-slate-700
-        text-slate-100
+        bg-white
         container
         mx-2
         p-2`}
