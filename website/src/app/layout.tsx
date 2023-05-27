@@ -45,7 +45,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className}
+        bg-slate-700
+        text-slate-100
+        container
+        mx-2
+        p-2`}
+      >
+        {children}
+      </body>
       <Analytics />
     </html>
   );
