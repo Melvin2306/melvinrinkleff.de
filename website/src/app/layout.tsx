@@ -69,7 +69,7 @@ export default function RootLayout({
         p-2`}
       >
         <Navbar />
-        {children}
+        <>{children}</>
         <Footer />
       </body>
 
