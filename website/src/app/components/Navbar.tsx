@@ -20,9 +20,9 @@ export default function Navbar() {
     <>
       <div className="h-14"></div>
 
-      <header className="fixed inset-x-0 top-0 z-50">
+      <header className="fixed inset-x-0 top-0 z-50 p-4">
         <nav
-          className="flex items-center justify-between pt-4 lg:px-6"
+          className="flex items-center justify-between lg:px-6"
           aria-label="Navigation Bar"
         >
           <div className="flex lg:flex-1">
