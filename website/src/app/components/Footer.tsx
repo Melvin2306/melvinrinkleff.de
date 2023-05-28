@@ -17,7 +17,7 @@ export default function Footer() {
     },
     {
       pic: "/mail.png",
-      href: "mailto:info@melvinrinkleff.de",
+      href: "mailto:moin@melvinrinkleff.de",
     },
   ];
 
