@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import Navbar from "./components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,6 +46,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(", ")} />
+        <meta name="author" content={metadata.title} />
+        <meta name="url" content={metadata.url} />
+        <meta name="og:title" content={metadata.title} />
+        <meta name="og:description" content={metadata.description} />
+        <meta name="og:url" content={metadata.url} />
+        <meta name="og:type" content="website" />
+        <meta name="og:site_name" content={metadata.title} />
+        <meta name="og:locale" content="de_GE" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body
         className={`${inter.className}
         bg-white
@@ -52,8 +67,10 @@ export default function RootLayout({
         mx-2
         p-2`}
       >
+        <Navbar />
         {children}
       </body>
+
       <Analytics />
     </html>
   );
