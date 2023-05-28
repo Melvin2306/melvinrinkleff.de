@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, ChangeEvent, FormEvent } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 interface IFormState {
   name: string;
@@ -19,18 +21,38 @@ export default function Contact() {
     event.preventDefault();
 
     try {
-      const res = await fetch("/api/send", {
+      const res = await fetch("/api/email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formState),
       });
+      console.log(formState);
+      console.log(res);
 
       setFormState({ name: "", email: "", message: "" });
-      alert("Message sent!");
+      toast.success("Message sent", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     } catch (error) {
-      console.error(error);
+      toast.error(error, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   };
 
@@ -62,6 +84,7 @@ export default function Contact() {
         required
       />
       <button type="submit">Send</button>
+      <ToastContainer />
     </form>
   );
 }
