@@ -5,7 +5,6 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      ignore: ["/loading", "/not-found"],
     },
     sitemap: "https://melvinrinkleff.de/sitemap.xml",
   };
