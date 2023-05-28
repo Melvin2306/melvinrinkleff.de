@@ -22,7 +22,8 @@ const CV: React.FC = () => {
         ],
       },
       {
-        degree: "Bachelor Business Administration (Specialization Energy Economics)",
+        degree:
+          "Bachelor Business Administration (Specialization Energy Economics)",
         institution: "Hochschule Weserberland",
         period: "2018-2021",
         location: "Hameln",
@@ -141,8 +142,6 @@ const CV: React.FC = () => {
       },
     ],
   };
-};
-
 
   return (
     <div className="p-6">
@@ -175,6 +174,15 @@ const CV: React.FC = () => {
         <ul>
           {data.skills.map((skill) => (
             <li key={skill.name}>{skill.name}</li>
+          ))}
+        </ul>
+      </div>
+      {/*  Industry Knowledge Section */}
+      <div>
+        <h2 className="text-2xl font-bold">Industry Knowledge</h2>
+        <ul>
+          {data.industryKnowledge.map((knowledge) => (
+            <li key={knowledge}>{knowledge}</li>
           ))}
         </ul>
       </div>
