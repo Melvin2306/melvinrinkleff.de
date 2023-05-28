@@ -11,7 +11,7 @@ export default function Imprint() {
       <p>
         {" "}
         Email:{" "}
-        <Link href="mailto:info@melvinrinkleff.de">info@melvinrinkleff.de</Link>
+        <Link href="mailto:moin@melvinrinkleff.de">moin@melvinrinkleff.de</Link>
       </p>{" "}
     </div>
   );
