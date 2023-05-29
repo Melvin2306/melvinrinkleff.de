@@ -7,7 +7,7 @@ export default function Example() {
       className="relative isolate px-6"
       style={{ lineHeight: "2", fontSize: "1.5rem" }}
     >
-      <div className="mx-auto max-w-7xl mt-10 mb-20 flex">
+      <div className="mx-auto max-w-7xl mt-10 mb-80 flex">
         <div className="w-2/5">
           <Image
             src="/melvinBig.jpg"
