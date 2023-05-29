@@ -49,6 +49,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>{metadata.title}</title>
+        <link rel="icon" href="/favicon.ico" />
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords.join(", ")} />
         <meta name="author" content={metadata.title} />
