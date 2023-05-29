@@ -17,15 +17,14 @@ export default function Footer() {
     },
     {
       pic: "/mail.png",
-      href: "mailto:info@melvinrinkleff.de",
+      href: "mailto:moin@melvinrinkleff.de",
     },
   ];
 
   return (
-    <div className="flex flex-col h-screen">
-      <div className="flex-1"></div>
+    <div className="flex flex-col h-8">
       <footer
-        className="flex items-center justify-between pb-3"
+        className="flex items-center justify-between pb-3 mx-4 position-fixed bottom-0"
         aria-label="Footer"
       >
         <p className="text-sm font-semibold leading-6 text-gray-900">
@@ -49,7 +48,13 @@ export default function Footer() {
               href={item.href}
               className="text-sm font-semibold leading-6 text-gray-900"
             >
-              <Image src={item.pic} alt={item.href} height={25} width={25} />
+              <Image
+                src={item.pic}
+                alt={item.href}
+                height={25}
+                width={25}
+                className="hover:opacity-50"
+              />
             </a>
           ))}
         </div>

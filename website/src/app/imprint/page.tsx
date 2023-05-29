@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Imprint() {
   return (
-    <div>
+    <div className="mb-20">
       <h1>Imprint</h1>
       <h2> Melvin Rinkleff </h2>
       <p> Kornradenstraße 2A </p>
@@ -11,7 +11,7 @@ export default function Imprint() {
       <p>
         {" "}
         Email:{" "}
-        <Link href="mailto:info@melvinrinkleff.de">info@melvinrinkleff.de</Link>
+        <Link href="mailto:moin@melvinrinkleff.de">moin@melvinrinkleff.de</Link>
       </p>{" "}
     </div>
   );
