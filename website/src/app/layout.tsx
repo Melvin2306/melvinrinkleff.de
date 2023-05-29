@@ -64,7 +64,6 @@ export default function RootLayout({
       <body
         className={`${inter.className}
         bg-white
-        container
         mx-2
         p-2`}
       >
