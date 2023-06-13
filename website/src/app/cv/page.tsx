@@ -113,6 +113,7 @@ const CV: React.FC = () => {
         institution: "GPM-Deutsche Gesellschaft für Projektmanagement e.V.",
         year: "2020",
         location: "Hameln",
+        url: "",
       },
     ],
     voluntaryWork: [
@@ -123,6 +124,7 @@ const CV: React.FC = () => {
         location: "Berlin",
         description:
           "Representation of the student body in different areas of the university life at CODE, in particular being a member of the Admission Committee, initiating and organizing community events",
+        url: "",
       },
       {
         role: "Hackathon Event Management",
@@ -131,6 +133,7 @@ const CV: React.FC = () => {
         location: "Berlin",
         description:
           "Event Management and various other tasks at //Slash. //Slash is a student initiative at CODE University at which we are organizing a sustainability hackathon for 400 students and young professionals",
+        url: "",
       },
       {
         role: "Member of the Social Committee",
@@ -139,6 +142,36 @@ const CV: React.FC = () => {
         location: "Berlin",
         description:
           "Deciding over requests for hardship from repayers. CHANCEN eG promotes equal opportunities for students irrespective of their financial background to finance their studies through an income share agreement",
+        url: "",
+      },
+    ],
+    education: [
+      {
+        degree: "Bachelor of Science in Software Engineering",
+        institution: "CODE University of Applied Sciences",
+        period: "2019-2023",
+        location: "Berlin",
+        url: "",
+      },
+    ],
+    experience: [
+      {
+        role: "Software Engineering Intern",
+        company: "SAP SE",
+        period: "2021",
+        location: "Berlin",
+        description:
+          "Worked on the SAP Cloud Platform Integration Suite, specifically on the SAP Cloud Platform Open Connectors service. Developed a feature to support OAuth 2.0 authentication for a new connector",
+        url: "",
+      },
+      {
+        role: "Software Engineering Intern",
+        company: "SAP SE",
+        period: "2020",
+        location: "Berlin",
+        description:
+          "Worked on the SAP Cloud Platform Integration Suite, specifically on the SAP Cloud Platform Open Connectors service. Developed a feature to support OAuth 2.0 authentication for a new connector",
+        url: "",
       },
     ],
   };
@@ -147,97 +180,122 @@ const CV: React.FC = () => {
     <div className="p-6">
       <h1 className="text-4xl font-bold">{data.name}</h1>
       {/* Education Section */}
-      <div>
+      <div className="my-4">
         <h2 className="text-2xl font-bold">Education</h2>
         {data.education.map((edu) => (
-          <div key={edu.institution}>
-            <h3>{edu.degree}</h3>
-            <p>{edu.institution}</p>
+          <div
+            key={edu.institution}
+            className="border border-blue-200 rounded-md p-2 my-2"
+          >
+            <h3 className="text-xl font-semibold">{edu.degree}</h3>
+            <p>
+              <a href={edu.url}>{edu.institution}</a>
+            </p>
             <p>{edu.period}</p>
           </div>
         ))}
       </div>
       {/* Experience Section */}
-      <div>
+      <div className="my-4">
         <h2 className="text-2xl font-bold">Experience</h2>
         {data.experience.map((exp) => (
-          <div key={exp.company}>
-            <h3>{exp.role}</h3>
-            <p>{exp.company}</p>
+          <div
+            key={exp.company}
+            className="border border-blue-200 rounded-md p-2 my-2"
+          >
+            <h3 className="text-xl font-semibold">{exp.role}</h3>
+            <p>
+              <a href={exp.url}>{exp.company}</a>
+            </p>
             <p>{exp.period}</p>
           </div>
         ))}
       </div>
-      {/* Skills Section */}
-      <div>
-        <h2 className="text-2xl font-bold">Skills</h2>
-        <ul>
-          {data.skills.map((skill) => (
-            <li key={skill.name}>{skill.name}</li>
-          ))}
-        </ul>
-      </div>
-      {/*  Industry Knowledge Section */}
-      <div>
-        <h2 className="text-2xl font-bold">Industry Knowledge</h2>
-        <ul>
-          {data.industryKnowledge.map((knowledge) => (
-            <li key={knowledge}>{knowledge}</li>
-          ))}
-        </ul>
-      </div>
-      {/* Languages Section */}
-      <div>
-        <h2 className="text-2xl font-bold">Languages</h2>
-        <ul>
-          {data.languages.map((language) => (
-            <li key={language.name}>{language.name}</li>
-          ))}
-        </ul>
-      </div>
-      {/* Tools Section */}
-      <div>
-        <h2 className="text-2xl font-bold">Tools</h2>
-        <ul>
-          {data.tools.map((tool) => (
-            <li key={tool.name}>{tool.name}</li>
-          ))}
-        </ul>
-      </div>
-      {/* Socials Section */}
-      <div>
-        <h2 className="text-2xl font-bold">Socials</h2>
-        <ul>
-          {data.socials.map((social) => (
-            <li key={social.platform}>
-              <Link href={social.link} target="_blank" rel="noreferrer">
-                {social.platform}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      {/* Voluntary Work Section */}
+      <div className="my-4">
+        <h2 className="text-2xl font-bold">Voluntary Work</h2>
+        {data.voluntaryWork.map((work) => (
+          <div
+            key={work.organization}
+            className="border border-blue-200 rounded-md p-2 my-2"
+          >
+            <h3 className="text-xl font-semibold">{work.role}</h3>
+            <p>
+              <a href={work.url}>{work.organization}</a>
+            </p>
+            <p>{work.period}</p>
+          </div>
+        ))}
       </div>
       {/* Additional Courses Section */}
-      <div>
+      <div className="my-4">
         <h2 className="text-2xl font-bold">Additional Courses</h2>
         {data.additionalCourses.map((course) => (
-          <div key={course.name}>
-            <h3>{course.name}</h3>
-            <p>{course.institution}</p>
+          <div
+            key={course.name}
+            className="border border-blue-200 rounded-md p-2 my-2"
+          >
+            <h3 className="text-xl font-semibold">{course.name}</h3>
+            <p>
+              <a href={course.url}>{course.institution}</a>
+            </p>
             <p>{course.year}</p>
           </div>
         ))}
       </div>
-      {/* Voluntary Work Section */}
-      <div>
-        <h2 className="text-2xl font-bold">Voluntary Work</h2>
-        {data.voluntaryWork.map((work) => (
-          <div key={work.organization}>
-            <h3>{work.role}</h3>
-            <p>{work.organization}</p>
-            <p>{work.period}</p>
-          </div>
-        ))}
+      <div className="flex flex-row my-4">
+        {/* Skills Section */}
+        <div className="w-full">
+          <h2 className="text-2xl font-bold">Skills</h2>
+          <ul>
+            {data.skills.map((skill) => (
+              <li key={skill.name}>{skill.name}</li>
+            ))}
+          </ul>
+        </div>
+        {/*  Industry Knowledge Section */}
+        <div className="w-full">
+          <h2 className="text-2xl font-bold">Industry Knowledge</h2>
+          <ul>
+            {data.industryKnowledge.map((knowledge) => (
+              <li key={knowledge}>{knowledge}</li>
+            ))}
+          </ul>
+        </div>
+        {/* Tools Section */}
+        <div className="w-full">
+          <h2 className="text-2xl font-bold">Tools</h2>
+          <ul>
+            {data.tools.map((tool) => (
+              <li key={tool.name}>{tool.name}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div className="flex flex-row">
+        {/* Languages Section */}
+        <div className="w-full">
+          <h2 className="text-2xl font-bold">Languages</h2>
+          <ul>
+            {data.languages.map((language) => (
+              <li key={language.name}>{language.name}</li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Socials Section */}
+        <div className="w-full">
+          <h2 className="text-2xl font-bold">Socials</h2>
+          <ul>
+            {data.socials.map((social) => (
+              <li key={social.platform}>
+                <Link href={social.link} target="_blank" rel="noreferrer">
+                  {social.platform}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
