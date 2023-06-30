@@ -9,6 +9,20 @@ const CV: React.FC = () => {
     phone: "+49 1590 1188669",
     education: [
       {
+        degree: "Exchange Semester",
+        institution: "NTNU - Norwegian University of Science and Technology",
+        period: "August 2023-December 2023",
+        location: "Gjøvik",
+        courses: [
+          "//Slash Hackathon",
+          "Building my own Web Application",
+          "Research in relationships and sexual pleasure",
+          "Spotify Data Analysis",
+          "Group Full Stack Development",
+        ],
+        url: "https://www.ntnu.edu",
+      },
+      {
         degree: "Bachelor Software Engineering",
         institution: "CODE University of Applied Sciences",
         period: "2021-Present",
@@ -20,6 +34,7 @@ const CV: React.FC = () => {
           "Spotify Data Analysis",
           "Group Full Stack Development",
         ],
+        url: "https://code.berlin",
       },
       {
         degree:
@@ -29,13 +44,21 @@ const CV: React.FC = () => {
         location: "Hameln",
         project:
           "Transformation of the German gas infrastructure to hydrogen infrastructure",
+        url: "https://www.hsw-hameln.de",
       },
     ],
     experience: [
       {
+        role: "Working Student Full Stack Development",
+        company: "Carbyte",
+        period: "August 2023-Present",
+        location: "Remote",
+        description: "Fullstack development with Next.js",
+      },
+      {
         role: "Founder Associate (Working Student)",
         company: "suena",
-        period: "September 2022-Present",
+        period: "September 2022-July 2023",
         location: "Hamburg (remote)",
         description:
           "Support of the founders in administrative tasks, business development and finance and development of KPIs",
@@ -113,7 +136,7 @@ const CV: React.FC = () => {
         institution: "GPM-Deutsche Gesellschaft für Projektmanagement e.V.",
         year: "2020",
         location: "Hameln",
-        url: "",
+        url: "https://www.gpm-ipma.de",
       },
     ],
     voluntaryWork: [
@@ -124,7 +147,7 @@ const CV: React.FC = () => {
         location: "Berlin",
         description:
           "Representation of the student body in different areas of the university life at CODE, in particular being a member of the Admission Committee, initiating and organizing community events",
-        url: "",
+        url: "https://code.berlin",
       },
       {
         role: "Hackathon Event Management",
@@ -133,7 +156,7 @@ const CV: React.FC = () => {
         location: "Berlin",
         description:
           "Event Management and various other tasks at //Slash. //Slash is a student initiative at CODE University at which we are organizing a sustainability hackathon for 400 students and young professionals",
-        url: "",
+        url: "https://www.slash.berlin",
       },
       {
         role: "Member of the Social Committee",
@@ -142,36 +165,7 @@ const CV: React.FC = () => {
         location: "Berlin",
         description:
           "Deciding over requests for hardship from repayers. CHANCEN eG promotes equal opportunities for students irrespective of their financial background to finance their studies through an income share agreement",
-        url: "",
-      },
-    ],
-    education: [
-      {
-        degree: "Bachelor of Science in Software Engineering",
-        institution: "CODE University of Applied Sciences",
-        period: "2019-2023",
-        location: "Berlin",
-        url: "",
-      },
-    ],
-    experience: [
-      {
-        role: "Software Engineering Intern",
-        company: "SAP SE",
-        period: "2021",
-        location: "Berlin",
-        description:
-          "Worked on the SAP Cloud Platform Integration Suite, specifically on the SAP Cloud Platform Open Connectors service. Developed a feature to support OAuth 2.0 authentication for a new connector",
-        url: "",
-      },
-      {
-        role: "Software Engineering Intern",
-        company: "SAP SE",
-        period: "2020",
-        location: "Berlin",
-        description:
-          "Worked on the SAP Cloud Platform Integration Suite, specifically on the SAP Cloud Platform Open Connectors service. Developed a feature to support OAuth 2.0 authentication for a new connector",
-        url: "",
+        url: "https://chancen-eg.de",
       },
     ],
   };
