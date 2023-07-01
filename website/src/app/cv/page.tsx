@@ -177,7 +177,20 @@ const CV: React.FC = () => {
 
   return (
     <div className="p-6">
-      <h1 className="text-4xl font-bold">{data.name}</h1>
+      <div className="flex justify-between">
+        <div>
+          <h1 className="text-4xl font-bold">{data.name}</h1>
+          <p className="text-2xl font-semibold">{data.position}</p>
+        </div>
+        <div>
+          <p className="text-xl">
+            <a href={`mailto:${data.email}`}>{data.email}</a>
+          </p>
+          <p className="text-xl">
+            <a href={`tel:${data.phone}`}>{data.phone}</a>
+          </p>
+        </div>
+      </div>
       {/* Education Section */}
       <div className="my-4">
         <h2 className="text-2xl font-bold">Education</h2>
@@ -198,6 +211,7 @@ const CV: React.FC = () => {
       <div className="my-4">
         <h2 className="text-2xl font-bold">Experience</h2>
         {data.experience.map((exp) => (
+          // <Link key={exp.company} to={`/experience/${experience}`}>
           <div
             key={exp.company}
             className="border border-blue-200 rounded-md p-2 my-2"
@@ -208,6 +222,7 @@ const CV: React.FC = () => {
             </p>
             <p>{exp.period}</p>
           </div>
+          // </Link>
         ))}
       </div>
       {/* Voluntary Work Section */}
