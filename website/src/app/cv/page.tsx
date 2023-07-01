@@ -203,6 +203,8 @@ const CV: React.FC = () => {
             <p>
               <a href={edu.url}>{edu.institution}</a>
             </p>
+            <p>{edu.description}</p>
+            <p>{edu.location}</p>
             <p>{edu.period}</p>
           </div>
         ))}
@@ -220,6 +222,8 @@ const CV: React.FC = () => {
             <p>
               <a href={exp.url}>{exp.company}</a>
             </p>
+            <p>{exp.description}</p>
+            <p>{exp.location}</p>
             <p>{exp.period}</p>
           </div>
           // </Link>
@@ -237,6 +241,8 @@ const CV: React.FC = () => {
             <p>
               <a href={work.url}>{work.organization}</a>
             </p>
+            <p>{work.description}</p>
+            <p>{work.location}</p>
             <p>{work.period}</p>
           </div>
         ))}
@@ -253,6 +259,7 @@ const CV: React.FC = () => {
             <p>
               <a href={course.url}>{course.institution}</a>
             </p>
+            <p>{course.location}</p>
             <p>{course.year}</p>
           </div>
         ))}
