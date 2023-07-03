@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
+import prisma from "../lib/prisma";
+
 const CV: React.FC = () => {
   const data = {
     name: "Melvin Rinkleff",
