@@ -1,9 +1,6 @@
+import prisma from "../../../lib/prisma";
+
 export async function GET(Request) {
-  const { id } = Request.params;
-  const education = await prisma.education.findUnique({
-    where: {
-      id: Number(id),
-    },
-  });
-  return new Response(education);
+  const edu = await prisma.education.findAll();
+  return new Response(edu);
 }
