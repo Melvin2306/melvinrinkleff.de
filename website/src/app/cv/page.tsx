@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
 
-import prisma from "../lib/prisma";
-
 const CV: React.FC = () => {
   const data = {
     name: "Melvin Rinkleff",
@@ -205,7 +203,6 @@ const CV: React.FC = () => {
             <p>
               <a href={edu.url}>{edu.institution}</a>
             </p>
-            <p>{edu.description}</p>
             <p>{edu.location}</p>
             <p>{edu.period}</p>
           </div>
