@@ -4,8 +4,9 @@ import { render } from "@react-email/render";
 
 type EmailPayload = {
   to: string;
+  from: string
   subject: string;
-  html: string;
+  body: string;
 };
 
 // Replace with your SMTP credentials
@@ -19,7 +20,7 @@ const smtpOptions = {
   },
 };
 
-export const sendEmail = async (data: EmailPayload) => {
+const sendEmail = async (data: EmailPayload) => {
   const transporter = nodemailer.createTransport({
     ...smtpOptions,
   });
