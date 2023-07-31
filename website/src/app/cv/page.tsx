@@ -12,7 +12,7 @@ const CV: React.FC = () => {
         degree: "Exchange Semester",
         institution: "NTNU - Norwegian University of Science and Technology",
         period: "August 2023 - December 2023",
-        location: "Gjøvik",
+        location: "Gjøvik, Norway",
         courses: [
           "//Slash Hackathon",
           "Building my own Web Application",
@@ -26,7 +26,7 @@ const CV: React.FC = () => {
         degree: "Bachelor Software Engineering",
         institution: "CODE University of Applied Sciences",
         period: "2021 - Present",
-        location: "Berlin",
+        location: "Berlin, Germany",
         projects: [
           "//Slash Hackathon",
           "Building my own Web Application",
@@ -41,7 +41,7 @@ const CV: React.FC = () => {
           "Bachelor Business Administration (Specialization Energy Economics)",
         institution: "Hochschule Weserberland",
         period: "2018 - 2021",
-        location: "Hameln",
+        location: "Hameln, Germany",
         project:
           "Transformation of the German gas infrastructure to hydrogen infrastructure",
         url: "https://www.hsw-hameln.de",
@@ -60,7 +60,7 @@ const CV: React.FC = () => {
         role: "Founder Associate (Working Student)",
         company: "suena GmbH",
         period: "September 2022 - July 2023",
-        location: "Hamburg (remote)",
+        location: "Hamburg, Germany (remote)",
         description:
           "Support of the founders in administrative tasks, business development and finance and development of KPIs",
         url: "https://www.suena.energy",
@@ -69,7 +69,7 @@ const CV: React.FC = () => {
         role: "Working Student Operations",
         company: "Ostrom",
         period: "March 2022 - September 2022",
-        location: "Berlin",
+        location: "Berlin, Germany",
         description:
           "Energy industry specific operations tasks, edifact communication with market partners, customer service",
         url: "https://www.ostrom.de",
@@ -78,7 +78,7 @@ const CV: React.FC = () => {
         role: "Business Process Analyst",
         company: "enercity",
         period: "July 2021 - March 2022",
-        location: "Hannover (remote)",
+        location: "Hannover, Germany (remote)",
         description:
           "Business process management and execution of business process automation for energy trading compliance processes",
         url: "https://www.enercity.de",
@@ -87,7 +87,7 @@ const CV: React.FC = () => {
         role: "Dual Studies (Business Administration with Specialization in Energy Economics)",
         company: "enercity",
         period: "August 2018 - July 2021",
-        location: "Hannover",
+        location: "Hannover, Germany",
         description:
           "Working in different teams and departments throughout the organization and special focus on the energy trading department and compliance",
         url: "https://www.enercity.de",
@@ -140,7 +140,7 @@ const CV: React.FC = () => {
         name: "Basic Certificate of Project Management",
         institution: "GPM-Deutsche Gesellschaft für Projektmanagement e.V.",
         year: "2020",
-        location: "Hameln",
+        location: "Hameln, Germany",
         url: "https://www.gpm-ipma.de",
       },
     ],
@@ -149,7 +149,7 @@ const CV: React.FC = () => {
         role: "Member of the Social Committee",
         organization: "CHANCEN eG",
         period: "2022 - Present",
-        location: "Berlin",
+        location: "Berlin, Germany",
         description:
           "Deciding over requests for hardship from repayers. CHANCEN eG promotes equal opportunities for students irrespective of their financial background to finance their studies through an income share agreement",
         url: "https://chancen-eg.de",
@@ -158,7 +158,7 @@ const CV: React.FC = () => {
         role: "Hackathon Event Management",
         organization: "//Slash Berlin",
         period: "2021 - Present",
-        location: "Berlin",
+        location: "Berlin, Germany",
         description:
           "Event Management and various other tasks at //Slash. //Slash is a student initiative at CODE University at which we are organizing a sustainability hackathon for 400 students and young professionals",
         url: "https://www.slash.berlin",
@@ -167,7 +167,7 @@ const CV: React.FC = () => {
         role: "Member of the Student Council",
         organization: "CODE University of Applied Sciences",
         period: "2021 - 2022",
-        location: "Berlin",
+        location: "Berlin, Germany",
         description:
           "Representation of the student body in different areas of the university life at CODE, in particular being a member of the Admission Committee, initiating and organizing community events",
         url: "https://code.berlin",
@@ -193,7 +193,9 @@ const CV: React.FC = () => {
       </div>
       {/* Education Section */}
       <div className="my-4">
-        <h2 className="text-2xl font-bold">Education</h2>
+        <Link href="/cv/education">
+          <h2 className="text-2xl font-bold">Education</h2>
+        </Link>
         {data.education.map((edu) => (
           <div
             key={edu.institution}
@@ -210,7 +212,9 @@ const CV: React.FC = () => {
       </div>
       {/* Experience Section */}
       <div className="my-4">
-        <h2 className="text-2xl font-bold">Experience</h2>
+        <Link href="/cv/experience">
+          <h2 className="text-2xl font-bold">Experience</h2>
+        </Link>
         {data.experience.map((exp) => (
           // <Link key={exp.company} to={`/experience/${experience}`}>
           <div
