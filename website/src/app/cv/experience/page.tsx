@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const CV: React.FC = () => {
+const Experience: React.FC = () => {
   const data = {
     name: "Melvin Rinkleff",
     position: "Student Software Engineering",
@@ -12,7 +12,7 @@ const CV: React.FC = () => {
         degree: "Exchange Semester",
         institution: "NTNU - Norwegian University of Science and Technology",
         period: "August 2023 - December 2023",
-        location: "Gjøvik, Norway",
+        location: "Gjøvik",
         courses: [
           "//Slash Hackathon",
           "Building my own Web Application",
@@ -26,7 +26,7 @@ const CV: React.FC = () => {
         degree: "Bachelor Software Engineering",
         institution: "CODE University of Applied Sciences",
         period: "2021 - Present",
-        location: "Berlin, Germany",
+        location: "Berlin",
         projects: [
           "//Slash Hackathon",
           "Building my own Web Application",
@@ -41,7 +41,7 @@ const CV: React.FC = () => {
           "Bachelor Business Administration (Specialization Energy Economics)",
         institution: "Hochschule Weserberland",
         period: "2018 - 2021",
-        location: "Hameln, Germany",
+        location: "Hameln",
         project:
           "Transformation of the German gas infrastructure to hydrogen infrastructure",
         url: "https://www.hsw-hameln.de",
@@ -60,7 +60,7 @@ const CV: React.FC = () => {
         role: "Founder Associate (Working Student)",
         company: "suena GmbH",
         period: "September 2022 - July 2023",
-        location: "Hamburg, Germany (remote)",
+        location: "Hamburg (remote)",
         description:
           "Support of the founders in administrative tasks, business development and finance and development of KPIs",
         url: "https://www.suena.energy",
@@ -69,7 +69,7 @@ const CV: React.FC = () => {
         role: "Working Student Operations",
         company: "Ostrom",
         period: "March 2022 - September 2022",
-        location: "Berlin, Germany",
+        location: "Berlin",
         description:
           "Energy industry specific operations tasks, edifact communication with market partners, customer service",
         url: "https://www.ostrom.de",
@@ -78,7 +78,7 @@ const CV: React.FC = () => {
         role: "Business Process Analyst",
         company: "enercity",
         period: "July 2021 - March 2022",
-        location: "Hannover, Germany (remote)",
+        location: "Hannover (remote)",
         description:
           "Business process management and execution of business process automation for energy trading compliance processes",
         url: "https://www.enercity.de",
@@ -87,7 +87,7 @@ const CV: React.FC = () => {
         role: "Dual Studies (Business Administration with Specialization in Energy Economics)",
         company: "enercity",
         period: "August 2018 - July 2021",
-        location: "Hannover, Germany",
+        location: "Hannover",
         description:
           "Working in different teams and departments throughout the organization and special focus on the energy trading department and compliance",
         url: "https://www.enercity.de",
@@ -140,7 +140,7 @@ const CV: React.FC = () => {
         name: "Basic Certificate of Project Management",
         institution: "GPM-Deutsche Gesellschaft für Projektmanagement e.V.",
         year: "2020",
-        location: "Hameln, Germany",
+        location: "Hameln",
         url: "https://www.gpm-ipma.de",
       },
     ],
@@ -149,7 +149,7 @@ const CV: React.FC = () => {
         role: "Member of the Social Committee",
         organization: "CHANCEN eG",
         period: "2022 - Present",
-        location: "Berlin, Germany",
+        location: "Berlin",
         description:
           "Deciding over requests for hardship from repayers. CHANCEN eG promotes equal opportunities for students irrespective of their financial background to finance their studies through an income share agreement",
         url: "https://chancen-eg.de",
@@ -158,7 +158,7 @@ const CV: React.FC = () => {
         role: "Hackathon Event Management",
         organization: "//Slash Berlin",
         period: "2021 - Present",
-        location: "Berlin, Germany",
+        location: "Berlin",
         description:
           "Event Management and various other tasks at //Slash. //Slash is a student initiative at CODE University at which we are organizing a sustainability hackathon for 400 students and young professionals",
         url: "https://www.slash.berlin",
@@ -167,7 +167,7 @@ const CV: React.FC = () => {
         role: "Member of the Student Council",
         organization: "CODE University of Applied Sciences",
         period: "2021 - 2022",
-        location: "Berlin, Germany",
+        location: "Berlin",
         description:
           "Representation of the student body in different areas of the university life at CODE, in particular being a member of the Admission Committee, initiating and organizing community events",
         url: "https://code.berlin",
@@ -191,32 +191,10 @@ const CV: React.FC = () => {
           </p>
         </div>
       </div>
-      {/* Education Section */}
-      <div className="my-4">
-        <Link href="/cv/education">
-          <h2 className="text-2xl font-bold">Education</h2>
-        </Link>
-        {data.education.map((edu) => (
-          <div
-            key={edu.institution}
-            className="border border-blue-200 rounded-md p-2 my-2"
-          >
-            <h3 className="text-xl font-semibold">{edu.degree}</h3>
-            <p>
-              <a href={edu.url}>{edu.institution}</a>
-            </p>
-            <p>{edu.location}</p>
-            <p>{edu.period}</p>
-          </div>
-        ))}
-      </div>
       {/* Experience Section */}
       <div className="my-4">
-        <Link href="/cv/experience">
-          <h2 className="text-2xl font-bold">Experience</h2>
-        </Link>
+        <h2 className="text-2xl font-bold">Experience</h2>
         {data.experience.map((exp) => (
-          // <Link key={exp.company} to={`/experience/${experience}`}>
           <div
             key={exp.company}
             className="border border-blue-200 rounded-md p-2 my-2"
@@ -229,100 +207,10 @@ const CV: React.FC = () => {
             <p>{exp.location}</p>
             <p>{exp.period}</p>
           </div>
-          // </Link>
         ))}
-      </div>
-      {/* Voluntary Work Section */}
-      <div className="my-4">
-        <h2 className="text-2xl font-bold">Voluntary Work</h2>
-        {data.voluntaryWork.map((work) => (
-          <div
-            key={work.organization}
-            className="border border-blue-200 rounded-md p-2 my-2"
-          >
-            <h3 className="text-xl font-semibold">{work.role}</h3>
-            <p>
-              <a href={work.url}>{work.organization}</a>
-            </p>
-            <p>{work.description}</p>
-            <p>{work.location}</p>
-            <p>{work.period}</p>
-          </div>
-        ))}
-      </div>
-      {/* Additional Courses Section */}
-      <div className="my-4">
-        <h2 className="text-2xl font-bold">Additional Courses</h2>
-        {data.additionalCourses.map((course) => (
-          <div
-            key={course.name}
-            className="border border-blue-200 rounded-md p-2 my-2"
-          >
-            <h3 className="text-xl font-semibold">{course.name}</h3>
-            <p>
-              <a href={course.url}>{course.institution}</a>
-            </p>
-            <p>{course.location}</p>
-            <p>{course.year}</p>
-          </div>
-        ))}
-      </div>
-      <div className="flex flex-row my-4">
-        {/* Skills Section */}
-        <div className="w-full">
-          <h2 className="text-2xl font-bold">Skills</h2>
-          <ul>
-            {data.skills.map((skill) => (
-              <li key={skill.name}>{skill.name}</li>
-            ))}
-          </ul>
-        </div>
-        {/*  Industry Knowledge Section */}
-        <div className="w-full">
-          <h2 className="text-2xl font-bold">Industry Knowledge</h2>
-          <ul>
-            {data.industryKnowledge.map((knowledge) => (
-              <li key={knowledge}>{knowledge}</li>
-            ))}
-          </ul>
-        </div>
-        {/* Tools Section */}
-        <div className="w-full">
-          <h2 className="text-2xl font-bold">Tools</h2>
-          <ul>
-            {data.tools.map((tool) => (
-              <li key={tool.name}>{tool.name}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div className="flex flex-row">
-        {/* Languages Section */}
-        <div className="w-full">
-          <h2 className="text-2xl font-bold">Languages</h2>
-          <ul>
-            {data.languages.map((language) => (
-              <li key={language.name}>{language.name}</li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Socials Section */}
-        <div className="w-full">
-          <h2 className="text-2xl font-bold">Socials</h2>
-          <ul>
-            {data.socials.map((social) => (
-              <li key={social.platform}>
-                <Link href={social.link} target="_blank" rel="noreferrer">
-                  {social.platform}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
     </div>
   );
 };
 
-export default CV;
+export default Experience;
