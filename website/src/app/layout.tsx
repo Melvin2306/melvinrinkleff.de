@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,7 +57,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <title>{metadata.title}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content={metadata.description} />
@@ -70,7 +71,7 @@ export default function RootLayout({
         <meta name="og:site_name" content={metadata.title} />
         <meta name="og:locale" content="de_GE" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
+      </Head>
       <body
         className={`${inter.className}
         bg-white
