@@ -5,6 +5,7 @@ const Projects: React.FC = () => {
     projects: [
       {
         name: "Opinio",
+        href: "projects/opinio",
         description:
           "Opinio is a platform for employees to give feedback to the software development team of internal developed software tools. The software development team can then use this feedback to improve the software tools. The tool can be easily implemented in the internal software tool and provides different insights in how the employees use the internal software, current bugs, trends in the joy of using the software and much more.",
         role: "Full Stack Software Developer",
@@ -19,6 +20,7 @@ const Projects: React.FC = () => {
       },
       {
         name: "//Slash Hackathon 2022",
+        href: "projects/slash",
         description: "Event Management and various other tasks at //Slash. //Slash is a student initiative at CODE University at which we are organizing a sustainability hackathon for 400 students and young professionals",
         role: "Event Managment & Partnerships",
         roleDescription: "Managing several areas of the event from catering, operative work, hands on work on the event and partnerships with companies.",
@@ -31,6 +33,7 @@ const Projects: React.FC = () => {
       },
       {
         name: "Spotify Data Analysis",
+        href: "projects/spotify",
         description:
           "This project was part of the course 'Data Science' at the CODE University of Applied Sciences. The goal of the project was to analyze our own data from Spotify and to find interesting insights, see trends & anomalies.",
         role: "Data Scientist",
@@ -44,6 +47,7 @@ const Projects: React.FC = () => {
       },
       {
         name: "Peaches",
+        href: "projects/peaches",
         description: "Peaches was a research project in which we explored the exact reasons behind the so called 'Orgasm Gap' between women and men. We conducted interviews with women & men both either single or in a relationship. Based on this research we developed various concepts for products that could help to create more equality in the bedroom, unfortunately, we did not find a solution that we were happy with.",
         role: "Product Manager",
         roleDescription: "Worked as a Product Manager focussing on qualitative research",
@@ -56,6 +60,7 @@ const Projects: React.FC = () => {
       },
       {
         name: "Simulation of the Transformation of the Hydrogen Infrastructure in Germany",
+        href: "projects/transformation",
         description: "This project was part of my studies at HSW where we were simulating the transformation of the current natural gas infrastructure into a hydrogen infrastructure. We simulated the transformation together with the Germany company GASAG",
         role: "Team member",
         roleDescription: "Research in the current status of the natural gas infrastructure, possibilities to transform the current infrastructure, calculations of economic implecations",
@@ -77,7 +82,7 @@ const Projects: React.FC = () => {
           key={pro.name}
           className="border border-blue-200 rounded-md p-2 my-2"
         >
-          <h3 className="text-xl font-semibold">{pro.name}</h3>
+          <h3 className="text-xl font-semibold"><Link href={pro.href}>{pro.name}</Link></h3>
           <p>{pro.description}</p>
           <p>
             {pro.role} in a team of {pro.teamsize}

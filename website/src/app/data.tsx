@@ -205,29 +205,29 @@ export default function dataprovider (params: Array) {
       ],
       experience: [
         {
-          role: "Working Student Full Stack Development",
+          role: "Werkstudent Full Stack Entwicklung",
           company: "Carbyte",
-          period: "August 2023 - Present",
+          period: "August 2023 - Heute",
           location: "Remote",
-          description: "Fullstack development with Next.js",
+          description: "Fullstack Entwicklung mit Next.js",
           url: "https://carbyte.de",
         },
         {
-          role: "Founder Associate (Working Student)",
+          role: "Founder Associate (Werkstudent)",
           company: "suena GmbH",
-          period: "September 2022 - July 2023",
-          location: "Hamburg, Germany (remote)",
+          period: "September 2022 - Juli 2023",
+          location: "Hamburg, Deutschland (remote)",
           description:
-            "Support of the founders in administrative tasks, business development and finance and development of KPIs",
+            "Unterstützung der Gründer bei administrativen Aufgaben, Business Development, Finanzen und der Entwicklung von KPIs",
           url: "https://www.suena.energy",
         },
         {
-          role: "Working Student Operations",
+          role: "Werkstudent Operations",
           company: "Ostrom",
-          period: "March 2022 - September 2022",
-          location: "Berlin, Germany",
+          period: "März 2022 - September 2022",
+          location: "Berlin, Deutschland",
           description:
-            "Energy industry specific operations tasks, edifact communication with market partners, customer service",
+            "Energieindustrie-spezifische operative Aufgaben, EDIFACT Kommunikation mit Marktpartnern, Kundensupport",
           url: "https://www.ostrom.de",
         },
         {
