@@ -16,6 +16,10 @@ export default function Footer() {
       href: "https://www.linkedin.com/in/melvin-rinkleff/",
     },
     {
+      pic: "/youtube.png",
+      href: "https://www.youtube.com/channel/UCQTI7v_mm6z8Y9eRhMXSxfQ",
+    },
+    {
       pic: "/mail.png",
       href: "mailto:moin@melvinrinkleff.de",
     },
