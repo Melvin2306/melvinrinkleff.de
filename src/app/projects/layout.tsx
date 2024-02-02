@@ -1,6 +1,10 @@
+import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
 import Head from "next/head";
-
-export const metadata = {
+const inter = Inter({ subsets: ["latin"] });
+const metadata = {
   title: "Projects Melvin Rinkleff",
   description: "Projects Melvin Rinkleff",
   url: "https://melvinrinkleff.de/projects",
@@ -35,9 +39,17 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       ;
-      <body>
-        <div>{children}</div>
+      <body
+        className={`${inter.className}
+        bg-white
+        mx-2
+        p-2`}
+      >
+        <Navbar />
+        <>{children}</>
+        <Footer />
       </body>
+      <Analytics />
     </html>
   );
 }
